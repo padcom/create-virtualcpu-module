@@ -1,6 +1,6 @@
 {
   "name": "@padcom/create-virtualcpu-module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "NPM project creator for VirtualCPU libraries",
   "module": "index.js",
   "type": "module",
