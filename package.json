@@ -1,0 +1,36 @@
+{
+  "name": "@padcom/create-virtualcpu-module",
+  "version": "0.0.0",
+  "description": "NPM project creator for VirtualCPU libraries",
+  "module": "index.js",
+  "type": "module",
+  "keywords": [
+    "npm"
+  ],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/padcom/create-virtualcpu-module#readme",
+  "bugs": {
+    "url": "https://github.com/padcom/create-virtualcpu-module/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padcom/create-virtualcpu-module.git"
+  },
+  "bin": {
+    "create-virtualcpu-module": "cli.js"
+  },
+  "scripts": {
+    "prepublishOnly": "npm install"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^8.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "!win32"
+  ]
+}
