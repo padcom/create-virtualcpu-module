@@ -13,7 +13,8 @@ export class InitNpmProjectCommand extends Action {
     const nodeVersion = await execute('node --version')
     const npmVersion = await execute('npm --version')
     withPackageJson(packageJson => {
-      packageJson.name = `@padcom/${packageJson.name}`
+      const name = packageJson.name
+      packageJson.name = `@padcom/${name}`
       packageJson.version = '0.0.0'
       packageJson.keywords = [ 'virtualcpu' ]
       packageJson.main = 'dist/index.js'
@@ -22,6 +23,17 @@ export class InitNpmProjectCommand extends Action {
       packageJson.engines = {
         node: `>=${nodeVersion.trim()}`,
         npm: `>=${npmVersion.trim()}`,
+      }
+      packageJson.repository = {
+        type: 'git',
+        url: `https://github.com/padcom/${name}`
+      }
+      packageJson.bugs = {
+        url: `https://github.com/padcom/${name}/issues`
+      }
+      packageJson.funding = {
+        type: 'patreon',
+        url: 'https://www.patreon.com/padcom'
       }
     })
     println('ok')
